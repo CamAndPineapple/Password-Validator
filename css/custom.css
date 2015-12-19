@@ -1,0 +1,55 @@
+/* --------------------------------------------
+Custom CSS for TIC Programming Challenge
+
+Author:		Camden Rudisill
+----------------------------------------------- */
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #41AFA5;
+	font-family: sans-serif;
+}
+
+/* ------------------------
+   	Container
+--------------------------*/
+
+.container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.header {
+	color: #fff;
+	letter-spacing: 4px;
+}
+
+#submit-button {
+	margin-top: 5px;
+	border: none;
+    height: 40px;
+    background: #5757C3;
+    color: white;
+    font-size: 15px;
+}
+
+#output-container {
+	margin-top: 50px;
+	width: 100%;
+	padding-left: 10px;
+	background-color: #fff;
+	text-align: left;
+}
+
+
