@@ -30,11 +30,12 @@
 
 			// Create text elements to designate whether password passes
 			this.acceptableText = document.createElement('p');
+			this.acceptableText.className = "acceptableText";
 			var acceptable = document.createTextNode('<' + text + '> is acceptable.');
 			this.acceptableText.appendChild(acceptable);
 
 			this.notAcceptableText = document.createElement('p');
-			this.notAcceptableText.style.color = "red";
+			this.notAcceptableText.className = "notAcceptableText";
 			var notAcceptable = document.createTextNode('<' + text + '> is not acceptable.');
 			this.notAcceptableText.appendChild(notAcceptable);
 		},
