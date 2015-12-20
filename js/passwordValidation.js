@@ -2,17 +2,23 @@
 
 	var passwordValidator = {
 
+		passRate: 0,
+		failRate: 0,
 
 
 		// Initialize event listener and bind to 'this'
 		init: function() {
 			this.cacheDOM();
 			this.submitButton.addEventListener('click', this, false);
+
 		},
 		cacheDOM: function() {
 			this.textArea = document.getElementById('input-area');
 			this.submitButton = document.getElementById('submit-button');
 			this.outputArea = document.getElementById('output-container');
+			this.passCount = document.getElementById('pass');
+			this.failCount = document.getElementById('fail');
+			this.totalCount = document.getElementById('total');
 		},
 		check: {
 			// Regexs to validate conditions on input
@@ -33,6 +39,8 @@
 			}
 		},
 		handleEvent: function() {
+
+			
 			// Scan text area contents line by line
 			this.textAreaInput = this.textArea.value.split('\n');
 			var input;
@@ -45,6 +53,11 @@
 
 			}
 			this.checkPasswords(arrayOfPasswords);
+
+			this.passCount.appendChild(this.passCountText);
+			this.failCount.appendChild(this.failCountText);
+			this.totalCount.appendChild(this.totalCountText);
+			
 		},
 		createTextElements: function(text) {
 
@@ -59,6 +72,13 @@
 			var notAcceptable = document.createTextNode('<' + text + '> is not acceptable.');
 			this.notAcceptableText.appendChild(notAcceptable);
 		},
+		updatePassFail: function(result) {
+			
+			result === "pass" ? this.passRate++ : this.failRate++;
+			this.passCountText = document.createTextNode(this.passRate);
+			this.failCountText = document.createTextNode(this.failRate);
+			this.totalCountText = document.createTextNode(this.passRate + this.failRate);
+		},
 		checkPasswords: function(passwords) {
 
 			for (var i = 0; i < passwords.length; i++) {
@@ -70,14 +90,18 @@
 				// 2: check for validation of conditions
 				if (typeof input !== 'string' || input === ' ') {
 					this.outputArea.appendChild(this.notAcceptableText);
+					this.updatePassFail('fail');
 				} else if (input === "end") {
 					return 0;
 				} else if (this.check.vowels(input) < 1 || this.check.threeConsecutiveLetters(input) || (this.check.twoSameLetters(input) && (!this.check.doubleE(input) && !this.check.doubleO(input)))) {
 					this.outputArea.appendChild(this.notAcceptableText);
+					this.updatePassFail('fail');
 				} else {
 					this.outputArea.appendChild(this.acceptableText);
+					this.updatePassFail('pass');
 				}
 			}
+		
 		}
 	};
 

@@ -114,7 +114,7 @@ body {
 
 #output-container {
     width: 75%;
-    height: 300px;
+    height: 230px;
     background-color: rgba(255, 255, 255, 0.1);
     text-align: left;
     overflow: scroll;
@@ -158,6 +158,36 @@ body {
 
 .example-input-header {
     font-size: 22px;
+}
+
+.pass-fail {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.result-text {
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 2px
+}
+
+#total {
+    list-style: none;
+    font-size: 24px;
+    margin-bottom: 11px;
+}
+
+#pass {
+    list-style: none;
+    background-color: #77B577;
+}
+
+#fail {
+    list-style: none;
+    background-color: #CC1F1F;
+    
 }
 
 
