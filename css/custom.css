@@ -24,15 +24,46 @@ body {
    	Container
 --------------------------*/
 
-.container {
+.master-container {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+
 }
+
+.form-container {
+	height: 600px;
+    width: 400px;
+    background-color: black;
+    background: url('http://forums.macrumors.com/attachments/image-jpg.573592/');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.background-overlay {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(45, 22, 214, 0.38);
+    height: 100%;
+    width: 100%;
+
+}
+
 
 .header {
 	color: #fff;
 	letter-spacing: 4px;
+}
+
+#input-area {
+	padding: 15px;
+    background-color: rgba(104, 104, 107, 0.51);
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 11px;
 }
 
 #submit-button {

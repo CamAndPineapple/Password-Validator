@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Johns Hopkins TIC Test</title>
+    <title>Password Validator</title>
     <meta name="description" content="Test">
     <meta author="Camden Rudisill">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,18 +23,23 @@
     <![endif]-->
 
     <!-- CONTAINER -->
-    <div class="container">
+    <div class="master-container">
         <h1 class="header"> Password Validator </h1>
-        <textarea id="input-area" placeholder="Enter Passwords" style="height:145px;"></textarea>
+
+        <div class="form-container">
+        <div class="background-overlay">
+        <textarea id="input-area" placeholder="Enter Passwords"></textarea>
         <button id="submit-button" type="submit">Check Passwords</button>
 
         <div id="output-container"></div><!-- end output-container -->
+        </div> <!-- end background-overlay -->
+        </div> <!-- end form-container -->
 
-    </div><!-- end container -->
+    </div><!-- end master-container -->
 
    
     <!-- Calendar.js -->
-    <script src="js/pass.js"></script>
+    <script src="js/passwordValidation.js"></script>
 
 
   </body>
