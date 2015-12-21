@@ -169,19 +169,20 @@ body {
 .result-text {
     display: inline-block;
     text-decoration: none;
-    padding: 4px;
+    padding: 7px;
     border-radius: 2px
 }
 
 #total {
     list-style: none;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 11px;
 }
 
 #pass {
     list-style: none;
     background-color: #77B577;
+    margin-right: 8px;
 }
 
 #fail {
