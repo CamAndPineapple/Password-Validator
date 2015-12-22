@@ -114,12 +114,13 @@ body {
 
 #output-container {
     width: 75%;
-    height: 230px;
+    height: 263px;
     background-color: rgba(255, 255, 255, 0.1);
     text-align: left;
     overflow: scroll;
     border-radius: 8px;
     color: #fff;
+    margin-bottom: 0px;
 }
 
 .notAcceptableText {
@@ -160,29 +161,35 @@ body {
     font-size: 22px;
 }
 
-.pass-fail {
-    font-size: 20px;
-    color: #fff;
+.total-container {
+    width: 100%;
     text-align: center;
 }
 
+.pass-fail-container {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+
 .result-text {
     display: inline-block;
-    text-decoration: none;
+    margin: 0px;
     padding: 7px;
-    border-radius: 2px
+    width: 50%;
 }
 
 #total {
-    list-style: none;
     font-size: 20px;
     margin-bottom: 11px;
+    color: white;
 }
 
 #pass {
     list-style: none;
     background-color: #77B577;
-    margin-right: 8px;
 }
 
 #fail {
